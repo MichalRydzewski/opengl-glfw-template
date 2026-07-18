@@ -4,6 +4,7 @@
 #include <GLFW/glfw3.h>
 
 #include <iostream>
+#include <cstdlib>
 
 inline constexpr const char* TITLE = "Just a spinning box";
 inline constexpr int WIDTH = 800;
@@ -11,8 +12,8 @@ inline constexpr int HEIGHT = 600;
 
 // setup
 void initAndSetupWindow();
-bool windowError(GLFWwindow *window);
-bool gladError(GLFWwindow *window);
+void checkForWindowError(GLFWwindow *window);
+void checkForGladError(GLFWwindow *window);
 void manageViewport(GLFWwindow *window);
 
 // callbacks 
