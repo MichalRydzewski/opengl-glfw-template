@@ -9,7 +9,7 @@ add_executable(project main.cpp)
 target_sources(
     project
     PRIVATE 
-      glad/src/glad.c
+      vendor/glad/src/glad.c
       helpers.cpp
       shader_class.cpp
       camera_class.cpp
@@ -22,7 +22,8 @@ target_sources(
 
 target_include_directories(project
     PRIVATE
-      ${CMAKE_CURRENT_SOURCE_DIR}/glad/include
+      ${CMAKE_CURRENT_SOURCE_DIR}/vendor/glad/include
+      ${CMAKE_CURRENT_SOURCE_DIR}/vendor
 )
 
 target_link_libraries(project

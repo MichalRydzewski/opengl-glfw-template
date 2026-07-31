@@ -6,7 +6,7 @@
 #include <iostream>
 #include <cstdlib>
 
-inline constexpr const char* TITLE = "Just a spinning box";
+inline constexpr const char* TITLE = "Project template";
 inline constexpr int WIDTH = 800;
 inline constexpr int HEIGHT = 600;
 
