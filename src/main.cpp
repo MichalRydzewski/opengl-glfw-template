@@ -1,4 +1,6 @@
 #include "helpers.h"
+#include "shader_class.h"
+#include "camera_class.h"
 
 #include <iostream>
 
