@@ -21,3 +21,11 @@ void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 
 // input
 void processInput(GLFWwindow *window);
+
+// error management
+GLenum glCheckError_(const char* file, int line);
+#define glCheckError() glCheckError_(__FILE__, __LINE__)
+
+void APIENTRY glDebugOutput(GLenum source, GLenum type, unsigned int id,
+                            GLenum severity, GLsizei length,
+                            const char* message, const void* userParam);
