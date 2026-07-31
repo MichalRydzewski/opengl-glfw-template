@@ -1,27 +1,31 @@
 cmake_minimum_required(VERSION 3.23)
-project(spinning_box)
+project(project)
 
 find_package(glfw3 REQUIRED)
 find_package(OpenGL REQUIRED)
 
-add_executable(spinning_box main.cpp)
+add_executable(project main.cpp)
 
 target_sources(
-    spinning_box
+    project
     PRIVATE 
       glad/src/glad.c
       helpers.cpp
+      shader_class.cpp
+      camera_class.cpp
     
     PUBLIC
       helpers.h
+      shader_class.h
+      camera_class.h
 )
 
-target_include_directories(spinning_box
+target_include_directories(project
     PRIVATE
       ${CMAKE_CURRENT_SOURCE_DIR}/glad/include
 )
 
-target_link_libraries(spinning_box
+target_link_libraries(project
     PRIVATE
       glfw
       OpenGL::GL
